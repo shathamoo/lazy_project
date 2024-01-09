@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="feedback.css" rel="stylesheet">
+    <link rel="StyleSheet" href="/navBar.css">
+    <style>
+        #timer {
+          font-size: 3em;
+          font-weight: bold;
+        }
+        #date {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .date-time-container {
+          position: fixed;
+          top: 10px;
+          left: 10px;
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      </style>
+      <div id="date-time"></div>
+      <script>
+        function updateDateTime() {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          const date = now.toLocaleDateString();
+          const time = `${hours}:${minutes}`;
+          document.getElementById('date-time').textContent = `${date} - ${time}`;
+        }
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+        // Initial call to display the date and time immediately
+        updateDateTime();
+      </script>
+</head>
+<body>
+    
+    <div class="date-time-container">
+        <div id="date-time"></div>
+    </div>
+    <!-- NavBar -->
+    <header class="title">
+        <div class="navBarContainer">
+            <input type="checkbox" name="navBar" id="navIcon">
+            <label for="navIcon"><img src="/images/menu.png" alt="menuIcon"></label>
+            <nav class="navbar">
+                <a href="/home/index.html">Home</a>
+                <a href="/about/About us.html">About</a>
+                <a href="/menu/Menu.html">Menu</a>
+                <a href="/phase2/payment.html">Payment</a>
+                <a href="/feedBack/Feedback.html">Feedback</a>
+                <a href="/contact/Contact us.html">Contact</a>
+                <a href="/sitemap/Sitemap.html">Sitemap</a>
+                 </nav>
+        </div>
+        <h2>Lazy Restaurant & Cafe</h2>
+    </header>
+    <!-- NavBar -->
+    <section id = "sec1">
+        <div class="sec1-heading">
+            <span>Reviews</span>
+            <h1>Clients Says</h1>
+        </div>
+        <div class="sec1-box-container">
+            <div class="sec1-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="/images/wo1.jpg" alt="profile">
+                        </div>
+                        <div class="name-user">
+                            <strong>Emily Robert</strong><br>
+                            <span>@emilyrobert</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="clients_reviews">
+                    <p>Great food, service, atmosphere… Rami Bahnassy, restaurant captain, is always professional and hospitable. Will always come back…</p>
+                    </div>
+            </div>
+            <div class="sec1-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="/images/wo2.jpg" alt="profile">
+                        </div>
+                        <div class="name-user">
+                            <strong>Susan William</strong><br>
+                            <span>@susanwilliam</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                    </div>
+                </div>
+                <div class="clients_reviews">
+                    <p> reely had a good dinner ..the services were excellent..both Mohamad shehadeh and rami bahnasy were very helpful</p>
+                    </div>
+            </div>
+            <div class="sec1-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="/images/wo3.jpg" alt="profile">
+                        </div>
+                        <div class="name-user">
+                            <strong>Linda James</strong><br>
+                            <span>@lindajames</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                    </div>
+                </div>
+                <div class="clients_reviews">
+                    <p>We went for Christmas family lunch , one of the best restaurant in Amman , great food and the staff are very friendly and professional, special thanks to Ahmed adili, Mohd shahadeh and Obadah abu hatab. Highly recommended if you have Middle East food</p>
+                    </div>
+            </div>
+            <div class="sec1-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="/images/wo44.jpg" alt="profile">
+                        </div>
+                        <div class="name-user">
+                            <strong>Sarah John</strong><br>
+                            <span>@sarahjohn</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                    </div>
+                </div>
+                <div class="clients_reviews">
+                    <p>It was as usual great evening. Enjoying the atmosphere and the food. Indeed, their food is great worth giving it a try. Special thanks for Mouhamad Sh7ade, Ganem, and muhanad al3aweel</p>
+                    </div>
+            </div>
+            <div class="sec1-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="/images/wo5.jpg" alt="profile">
+                        </div>
+                        <div class="name-user">
+                            <strong>Emma Daniel</strong><br>
+                            <span>emmadaniel</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                    </div>
+                </div>
+                <div class="clients_reviews">
+                    <p>We came with 10 friends and we had amazing dinner with delicious food and great service . Mr Mohammed shehadeh was excellent host and very pleasant .</p>
+                    </div>
+            </div>
+            <div class="sec1-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="/images/wo6.jpg" alt="profile">
+                        </div>
+                        <div class="name-user">
+                            <strong>Sophia Liam</strong><br>
+                            <span>@sophialiam</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                    </div>
+                </div>
+                <div class="clients_reviews">
+                    <p>Everything was good. The restaurant, the food and the staff. One of the best restaurants I visited in Amman Special thanks to Heba Batayneh for her creativity and kindness .</p>
+                    </div>
+            </div>
+            <div class="sec1-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="/images/wo68.jpg" alt="profile">
+                        </div>
+                        <div class="name-user">
+                            <strong>Olivia Jake</strong><br>
+                            <span>@oliviajake</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                    </div>
+                </div>
+                <div class="clients_reviews">
+                    <p>It's was an amazing food with perfect service with calm vibes and most thankful for Heba albataineh and Mohnad alowel they were very helpful and friendly</p>
+                    </div>
+            </div>
+            <div class="sec1-box">
+                <div class="box-top">
+                    <div class="profile">
+                        <div class="profile-img">
+                            <img src="/images/wo8.jpg" alt="profile">
+                        </div>
+                        <div class="name-user">
+                            <strong>Patricia David</strong><br>
+                            <span>@patriciadavid</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                    </div>
+                </div>
+                <div class="clients_reviews">
+                    <p>The service was great and the food was very delicious . Special thanks to haba bataineh for everything she did for us
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

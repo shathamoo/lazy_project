@@ -1,0 +1,32 @@
+
+#about
+{
+    width: 100%;
+    min-height: calc(100vh - 88px);
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+#about h2,
+#about p
+{
+    width: 80%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: #D99AA5;
+    text-transform: capitalize;
+}
+
+#about .aboutBody
+{
+    width: 80%;
+    color: #fff;
+    word-wrap: break-word;
+    background-color: #D99AA5;
+    padding: 15px;
+    border-radius: 25px;
+}

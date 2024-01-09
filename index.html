@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Restaurant & Cafe</title>
+    <link rel="StyleSheet" href="home.css">
+    <link rel="StyleSheet" href="/navBar.css">
+    <style>
+        #timer {
+          font-size: 3em;
+          font-weight: bold;
+        }
+        #date {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .date-time-container {
+          position: fixed;
+          top: 10px;
+          left: 10px;
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      </style>
+      <div id="date-time"></div>
+      <script>
+        function updateDateTime() {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          const date = now.toLocaleDateString();
+          const time = `${hours}:${minutes}`;
+          document.getElementById('date-time').textContent = `${date} - ${time}`;
+        }
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+        // Initial call to display the date and time immediately
+        updateDateTime();
+      </script>
+</head>
+<body>
+    
+    <div class="date-time-container">
+        <div id="date-time"></div>
+    </div>
+    <!-- NavBar -->
+    <header class="title">
+        <div class="navBarContainer">
+            <input type="checkbox" name="navBar" id="navIcon">
+            <label for="navIcon"><img src="/images/menu.png" alt="menuIcon"></label>
+            <nav class="navbar">
+              <a href="/home/index.html">Home</a>
+              <a href="/about/About us.html">About</a>
+              <a href="/menu/Menu.html">Menu</a>
+              <a href="/phase2/payment.html">Payment</a>
+              <a href="/feedBack/Feedback.html">Feedback</a>
+              <a href="/contact/Contact us.html">Contact</a>
+              <a href="/sitemap/Sitemap.html">Sitemap</a>
+         </nav>
+        </div>
+        <h2>Lazy Restaurant & Cafe</h2>
+    </header>
+    <!-- NavBar -->    
+    <div class="headerContainer">
+        <img id=logo src="/images/home-img.png" alt="home-img">
+        <a href="#about">see more</a>
+    </div>
+
+    <div id="about">
+        <p>Lazy Restaurant offers a laid-back dining experience where casual ambiance meets culinary delight. Enjoy a menu featuring an array of delicious dishes served with a side of relaxation, making every meal a leisurely affair. Our attentive staff ensures you can unwind and savor the flavors without any rush.</p>
+    </div>
+
+    <div id="menu">
+        <p>Discover a world of flavors at Lazy Restaurant. Our concise menu showcases a perfect blend of classic comfort and innovative creations. From savory starters to indulgent desserts, each dish is a culinary masterpiece crafted for your enjoyment. Join us for a delightful dining experience where every bite is a moment of culinary excellence.</p>
+        <a href="/menu/Menu.html">Discover our menu</a>
+    </div>
+
+</body>
+</html>

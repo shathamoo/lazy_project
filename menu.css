@@ -1,0 +1,125 @@
+
+
+.header
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header .menuTilte
+{
+    text-transform: capitalize;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.header .cart
+{
+    position: absolute;
+    right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    text-decoration: none;
+    color: #000;
+}
+
+#menu
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#menu .menuSection
+{
+    width: 450px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: column;
+    border-radius: 25px;
+    color: #593F44;
+    background-color: #ff9eae;
+    text-transform: capitalize;
+}
+
+#menu .menuSection img 
+{
+    width: 250px;
+    height: 200px;
+}
+
+#menu .menuSection ol 
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    border-top: 1px solid #593F44;
+    padding: 7px;
+}
+
+#menu .menuSection ul 
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+
+#menu .menuSection ul .dishCard
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#menu .menuSection ul li 
+{
+    width: 100%;
+}
+
+#menu .menuSection ul li h4
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+#menu .menuSection ul li h4 .span 
+{
+    height: 2px;
+    flex-grow: 1;
+    border-top: 3px dotted #000;
+}
+
+#menu .menuSection ul li h4 .addBtn 
+{
+    font-size: x-large;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+#menu .menuSection ul li h4 .addBtn:hover 
+{
+    color: rgb(0, 195, 255);
+}

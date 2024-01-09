@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Menu</title>
+    <link rel="StyleSheet" href="/style.css">   
+    <link rel="StyleSheet" href="menu.css">   
+    <link rel="StyleSheet" href="/navBar.css"> 
+    <style>
+        #timer {
+          font-size: 3em;
+          font-weight: bold;
+        }
+        #date {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    .date-time-container {
+          position: fixed;
+          top: 10px;
+          left: 10px;
+          background-color: #fff;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      </style>
+      <div id="date-time"></div>
+      <script>
+        function updateDateTime() {
+          const now = new Date();
+          const hours = String(now.getHours()).padStart(2, '0');
+          const minutes = String(now.getMinutes()).padStart(2, '0');
+          const date = now.toLocaleDateString();
+          const time = `${hours}:${minutes}`;
+          document.getElementById('date-time').textContent = `${date} - ${time}`;
+        }
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+        // Initial call to display the date and time immediately
+        updateDateTime();
+      </script>
+</head>
+<body>
+    
+    <div class="date-time-container">
+        <div id="date-time"></div>
+    </div>
+    <!-- NavBar -->
+    <header class="title">
+        <div class="navBarContainer">
+            <input type="checkbox" name="navBar" id="navIcon">
+            <label for="navIcon"><img src="/images/menu.png" alt="menuIcon"></label>
+            <nav class="navbar">
+                <a href="/home/index.html">Home</a>
+                <a href="/about/About us.html">About</a>
+                <a href="/menu/Menu.html">Menu</a>
+                <a href="/phase2/payment.html">Payment</a>
+                <a href="/feedBack/Feedback.html">Feedback</a>
+                <a href="/contact/Contact us.html">Contact</a>
+                <a href="/sitemap/Sitemap.html">Sitemap</a>
+                  </nav>
+        </div>
+        <h2>Lazy Restaurant & Cafe</h2>
+        
+    </header>
+    <!-- NavBar -->
+    <div class="header">
+        <h1 class="menuTilte">Menu</h1>
+        <a href="/phase2/payment.html" class="cart"><img src="../images/shopping-cart.png" alt="cartIcon"><span id="cartCount"></span></a>
+    </div>
+    <section id="menu">
+        <!-- Start Breadfast Section -->
+        <section id="breakfast" class="menuSection">
+            <h2>Breakfast</h2>
+            <img id="orderimages-breakfast" src="/images/breakfast.jpg">
+                <ol type="A">
+                    <h3>Manageesh</h3>
+                    <ul>
+                        <li><h4>Za'ater <span class="span"></span> <span class="price">0.70 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <li><h4>Halloumi <span class="span"></span> <span class="price">1.20 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <li><h4>Egg <span class="span"></span> <span class="price">1.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <li><h4>Turkey & cheese <span class="span"></span> <span class="price">1.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    </ul>
+                    <h3>Main Dishes</h3>
+                    <ul>
+                        <li><h4>Hummus <span class="span"></span> <span class="price">1.10 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <li><h4>Falafel <span class="span"></span> <span class="price">0.56 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <li><h4>Fava Beans (Foul) <span class="span"></span> <span class="price">1.10 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <li><h4>Oudseh <span class="span"></span> <span class="price">1.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <li><h4>Mtable <span class="span"></span> <span class="price">1.10 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    </ul>
+                </ol>
+        </section>
+        <!-- End Breadfast Section -->
+        <!-- <span class="price"></span> -->
+        <!-- Start Snacks Section -->
+        <section id="snacks" class="menuSection">
+            <h2>Snacks</h2>
+            <img id="orderimages-breakfast" src="/images/salad.jpg">
+            <ol type="A">
+                <!-- Start Salads Section -->
+                <h3>Salads</h3>
+                <ul>
+                    <li><h4>Fattoush <span class="span"></span> <span class="price">2.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Tabbouleh <span class="span"></span> <span class="price">2.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Rocca salad <span class="span"></span> <span class="price">3.30 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Crab salad <span class="span"></span> <span class="price">5.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Seafood salad <span class="span"></span> <span class="price">5.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <div class="dishCard">
+                        <li><h4>LRC salad <span class="span"></span> <span class="price">3.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6> Small diced:cucumber,tomato,dell pepper,lemon & olive oil dressing</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>Tahina arabian salad <span class="span"></span> <span class="price">3.20 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6> Arabian salad with tahina </h6>
+                    </div>
+                </ul>
+                <!-- End Salads Section -->
+                <!-- Start Hot Appetizers Section -->
+                <h3>Hot appetizers</h3>
+                <ul>
+                    <li><h4>Fried kubbeh <span class="span"></span> <span class="price">1.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Crispy halloumi fingers <span class="span"></span> <span class="price">2.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Vine leaves <span class="span"></span> <span class="price">1.10 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Potato with coriander & garlic <span class="span"></span> <span class="price">1.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Cheese Samoussas <span class="span"></span> <span class="price">2.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Stuffed mushroom with mozzarella & herbs <span class="span"></span> <span class="price">2.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                </ul>
+                <!-- End Hot Appetizers Section -->
+            </ol>
+        </section>
+        <!-- Start Snacks Section -->
+        
+        <!-- Start Dessert Section -->
+        <section id="dessert" class="menuSection">
+            <h2>Dessert</h2>
+            <img id="orderimages" src="/images/IceCream.jpg">
+            <ol type="A">
+                <ul>
+                    <li><h4>Knafeh <span class="span"></span> <span class="price">6.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Kolaj Omar <span class="span"></span> <span class="price">4.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Um Ali <span class="span"></span> <span class="price">3.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Brownies cake <span class="span"></span> <span class="price">3.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>pistachio with oshtah <span class="span"></span> <span class="price">4.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <div class="dishCard">
+                        <li><h4>Ice Cream <span class="span"></span> <span class="price">3.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Vanilla, Chocolate, Strawberry, Lemon, Mango, Oreo</h6>
+                    </div>
+                </ul>
+            </ol>
+        </section>
+        <!-- End Dessert Section -->
+        
+        <!-- Start Drinks Section -->
+        <section id="drinks" class="menuSection">
+            <h2>Drinks</h2>
+            <img id="orderimages" src="/images/drink.jpg">
+            <ol type="A">
+                <!-- Start Cold Drinks Section -->
+                <h3>Cold Drinks</h3>
+                <ul>
+                    <div class="dishCard">
+                        <li><h4>Soft drinks <span class="span"></span> <span class="price">0.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6> Pepsi, 7-UP, Miranda</h6>
+                    </div>
+                    <li><h4>Ayran yogurt <span class="span"></span> <span class="price">0.70 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <div class="dishCard">
+                        <li><h4>Fresh juice <span class="span"></span> <span class="price">3.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6> Orange, Lemon, Mango, Strawberry</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>Energy Drinks <span class="span"></span> <span class="price">1.60 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6> Red Bull,BM,BOOM BOOM</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>Milk Shakes <span class="span"></span> <span class="price">3.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6> Strawberry,Vanilla,Mango,Chocolate,Oreo, blizzard</h6>
+                    </div>
+                </ul>
+                <!-- End Cold Drinks Section -->
+                <!-- Start Hot Drinks Section -->
+                <h3>Hot Drinks</h3>
+                <ul>
+                    <li><h4>Tea <span class="span"></span> <span class="price">2.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Turkish coffee <span class="span"></span> <span class="price">2.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Espresso <span class="span"></span> <span class="price">3.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>American coffee <span class="span"></span> <span class="price">2.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Cappuccino <span class="span"></span> <span class="price">3.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4>
+                    <li><h4>Anise <span class="span"></span> <span class="price">3.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Zhourat tea <span class="span"></span> <span class="price">3.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Espresso hazelnuts with milk <span class="span"></span> <span class="price">3.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <li><h4>Camomile <span class="span"></span> <span class="price">4.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                </ul>
+                <!-- End Hot Drinks Section -->
+            </ol>
+        </section>
+        <!-- End Drinks Section -->
+        
+        <!-- Start Shisha Section -->
+        <section id="shisha" class="menuSection">
+            <h2>Shisha</h2>
+            <img id="orderimages" src="/images/shisha.jpg">
+            <ol>
+                <ul>
+                    <li><h4>VIP shisha <span class="span"></span> <span class="price">6.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                    <div class="dishCard">
+                        <li><h4>Shisha Flavors <span class="span"></span> <span class="price">5.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Strawberry, 2 Apples, Grape, Blueberry, Cherry, Lemon, Lemon with Mint, Gum with Mint, Watermelon, Watermelon with Mint </h6>
+                    </div>
+                </ul>
+            </ol>
+        </section>
+        <!-- End Shisha Section -->
+
+        <!-- Start Lunch Section -->
+        <section id="lunch" class="menuSection">
+            <h2>Lunch</h2>
+            <ol type="A">
+                <!-- Start Burger Section -->
+                <h3>Burger</h3>
+                <img id="orderimages" src="/images/Burger.jpg">
+                <ul>
+                    <div class="dishCard">
+                        <li><h4>Swiss Burger <span class="span"></span> <span class="price">5.75 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Chicken/Beef, mushroom, mayonnaise, emmental cheese</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>Urban Cheese Burger <span class="span"></span> <span class="price">6.10 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Chicken/Beef, onion, lettuce, tomato, spicy sauce</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>MIX Cheese Burger <span class="span"></span> <span class="price">5.75 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Cheder cheese, mozzarella stick, swiss cheese, pickels, turkey, lazy sauce ,tomatoes</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>LRC Special <span class="span"></span> <span class="price">4.65 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Chicken/Beef, tomato, lettuce, cheese, pickles and LRC sauce</h6>
+                    </div>
+                </ul>
+                <!-- End Burger Section -->
+                <!-- Start Pasta Section -->
+                <h3>Pasta</h3>
+                <img id="orderimages" src="/images/Pasta.jpg">
+                <ul>
+                    <div class="dishCard">
+                        <li><h4>Quatro cheese pasta <span class="span"></span> <span class="price">5.25 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Slices of chicken, fresh mushroom, cream</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>The basic Arrabbiata <span class="span"></span> <span class="price">4.65 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Penna pasta, garlic, olive oil, hotpepper, tomato sauce</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>The pesto chicken <span class="span"></span> <span class="price">4.35 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Cream with parmesan, mozzarella, heavy cream, fresh basil, pesto</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>Bascaiola pasta <span class="span"></span> <span class="price">4.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Beef, sweet pepper, corn, black olive, mushrooms, parmesan</h6>
+                    </div>
+                </ul>
+                <!-- End Pasta Section -->
+                <!-- Start Main Dishes Section -->
+                <h3>Main dishes</h3>
+                <ul>
+                    <div class="dishCard">
+                        <li><h4>Mixed grill <span class="span"></span> <span class="price">9.40 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Kebab, shiqaf, lamb ribs, onion, tomato, potato</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4> Mushroom steak <span class="span"></span> <span class="price">8.20 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>White sauce, mushroom sauce, lemon buttersauce, argentinian chimichurri</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>Turkish chicken <span class="span"></span> <span class="price">8.20 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>Two pieces of chicken, potato, mayonnaise, ketshap</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>artichoke steak <span class="span"></span> <span class="price">10.00 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>light green artichokes, vibrant pimientos</h6>
+                    </div>
+                    <div class="dishCard">
+                        <li><h4>Sea bass fish <span class="span"></span> <span class="price">14.50 JD</span> <span class="addBtn" onclick="getPrice(this)">+</span></h4></li>
+                        <h6>rice, vegetables, parsley, tehenyah</h6>
+                    </div>
+                </ul>
+                <!-- End Main Dishes Section -->
+            </ol>
+        </section>
+        <!-- End Lunch Section -->
+        
+
+        <script src="menu.js"></script>
+    </section>
+</body>
+</html>

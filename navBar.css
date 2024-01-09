@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-top: 48px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ----- Start Title Style ----- */
+.title 
+{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    background-color: #A6767E;
+    padding: 10px 0;
+    z-index: 100;
+    padding: 0 10px;
+}
+
+.title .navBarContainer
+{
+    justify-self: flex-start;
+}
+
+.title .navBarContainer #navIcon  
+{
+    display: none;
+}
+
+.title .navBarContainer #navIcon:checked ~ nav 
+{
+    height: 280px;
+    opacity: 1;
+}
+
+.title .navBarContainer img  
+{
+    color: #fff;
+    cursor: pointer;
+}
+
+.title .navBarContainer nav 
+{
+    position: absolute;
+    top: 48px;
+    width: 150px;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 0;
+    background-color: #D99AA5;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    z-index: 100;
+    transition: all 1s;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.title .navBarContainer nav a 
+{
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .5s;
+    border-bottom: 3px solid #D99AA5;
+}
+
+.title .navBarContainer nav a:hover {
+    border-bottom-color: #ff9eae;
+}
+.title #cartCount
+{
+    color: #fff;
+}
+/* ----- End Navbar Style ----- */

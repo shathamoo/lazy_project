@@ -1,0 +1,48 @@
+
+
+.contactHeader
+{
+    text-align: center;
+    text-transform: capitalize;
+    margin: 20px;
+}
+
+#contact
+{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#contact div 
+{
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid rebeccapurple;
+}
+
+#contact div span 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+} 
+
+#contact div span img 
+{
+    width: 25px;
+    height: 25px;
+}
